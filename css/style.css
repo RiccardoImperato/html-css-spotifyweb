@@ -126,6 +126,31 @@
 /* /Side menu */
 
 
+/* Topbar */
+
+.upgrade {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 5.625rem;
+    background-color: var(--bg-header);
+    opacity: 0.5;
+    color: #fff;
+    padding-right: .625rem;
+}
+
+.upgrade .btn {
+    border: .125rem solid #fff;
+    border-radius: 1.875rem;
+    padding: .625rem 1.5rem;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+/* /Topbar */
+
+
+
 /* Resposive */
 
 @media screen and (max-width:576px) {
