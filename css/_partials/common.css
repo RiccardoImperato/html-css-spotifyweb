@@ -1,0 +1,10 @@
+/* Common */
+
+body {
+    background-color: var(--bg-main);
+}
+
+.sidebar {
+    color: var(--menu);
+    background-color: var(--bg-menu);
+}

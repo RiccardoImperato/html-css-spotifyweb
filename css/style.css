@@ -3,3 +3,92 @@
 @import url(./_partials/common.css);
 @import url(./_partials/variables.css);
 @import url(./_partials/responsive.css);
+
+/* Side menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15rem;
+    line-height: 3rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    color: var(--menu);
+    background-color: var(--bg-menu);
+}
+
+.sidebar .logo {
+    padding: 1.25rem 0;
+}
+
+.sidebar .logo img {
+    width: 70%;
+    vertical-align: middle;
+}
+
+.sidebar .menu img {
+    width: 15%;
+    vertical-align: middle;
+}
+
+.sidebar .menu {
+    padding-bottom: 2rem;
+}
+
+.sidebar .create {
+    margin-bottom: 1.25rem;
+}
+
+.sidebar .create .plus {
+    display: inline-block;
+    width: 20%;
+    font-size: 3rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: .75rem;
+    color: var(--bg-menu);
+    background-color: var(--menu);
+}
+
+.sidebar .install {
+    border-bottom: .0625rem solid var(--menu);
+    margin-bottom: 1rem;
+}
+
+.sidebar .install img {
+    width: 10%;
+    vertical-align: middle;
+}
+
+.profile {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--menu);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar .user {
+    padding-left: .625rem;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bottom-sidebar {
+    background-color: var(--bg-menu);
+    padding: 0 1.25rem;
+    width: 15rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
