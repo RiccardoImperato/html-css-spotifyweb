@@ -210,8 +210,76 @@ ul {
 
 footer {
     height: 5.625rem;
-    background-color: #555555;
+    padding: 0 .625rem;
+    color: #fff;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+footer h6,
+.footer-icon i {
+    color: #555555;
+}
+
+footer .left .song {
+    display: flex;
+}
+
+footer .left .song img {
+    width: 10%;
+    padding: .5rem;
+    display: block;
+}
+
+footer .left .footer-title {
+    margin-left: .625rem;
+    margin-right: 1.5625rem;
+    align-self: center;
+}
+
+
+footer .left .footer-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .left .footer-icon i {
+    padding: .1875rem;
+}
+
+footer .left,
+footer .right {
+    width: 25%;
+}
+
+footer .central {
+    width: 50%;
+}
+
+footer .central .player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5625rem;
+    font-size: 1.5rem;
+}
+
+.fa-regular.fa-circle-play {
+    font-size: 2.125rem;
+}
+
+footer .right {
+    display: flex;
+    justify-content: end;
+}
+
+footer .right i {
+    padding: 10px;
+}
+
 
 /* #endregion FOOTER*/
 
