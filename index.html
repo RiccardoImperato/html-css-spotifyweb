@@ -2,99 +2,69 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Style -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Google Font -->
+    <!-- Import Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/xicon" href="icon.ico">
-    <!-- Font Awsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Spotyfy</title>
+    <link rel="shortcut icon" type="image/xicon" href="./img/favicon.ico">
+    <title>Spotify</title>
+
 </head>
 
 <body>
-
-    <!-- Small Sidebar -->
-    <nav class="small-sidebar">
-        <div class="top-icon">
-            <img src="./img/logo-small.svg" alt="">
-            <img src="./img/home.svg" alt="">
-            <img src="./img/search.svg" alt="">
-            <img src="./img/libreria.svg" alt="">
-        </div>
-        <div class="bottom-icon">
-            <div class="install">
-                <img src="./img/download.svg" alt="">
-            </div>
-            <div class="profile">
-                <img src="./img/profile.svg" alt="">
-            </div>
-        </div>
-    </nav>
-    <!-- /Small Sidebar -->
-
-    <!-- Sidebar -->
-    <nav class="sidebar">
-        <div class="logo">
-            <img src="./img/logo.svg" alt="Logo Spotify">
-        </div>
-        <div class="menu">
-            <ul>
-                <li>
-                    <img src="./img/home.svg" alt="">
-                    Home
-                </li>
-                <li>
-                    <img src="./img/search.svg" alt="">
-                    Cerca
-                </li>
-                <li>
-                    <img src="./img/libreria.svg" alt="">
-                    La tua libreria
-                </li>
-            </ul>
-        </div>
-        <div class="playlist">
-            <h4>PLAYLIST</h4>
-            <div class="create">
-                <div class="plus">+</div>
-                <span>Crea Playlist</span>
-            </div>
-            <ul>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-            </ul>
-        </div>
-        <div class="bottom-sidebar">
-            <div class="install">
-                <img src="./img/download.svg" alt="">
-                <span>Installa app</span>
-            </div>
-            <div class="profile">
-                <img src="./img/profile.svg" alt="">
-            </div>
-            <div class="user">
-                <h2>Jhon Doe</h2>
-            </div>
-        </div>
-    </nav>
-    <!-- /Sidebar -->
-
+    <!-- Main -->
     <main>
-        <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="top">
+                <div class="logo">
+                    <img src="./img/logo-small.svg" alt="Spotify" id="small-logo">
+                    <img src="./img/logo.svg" alt="Spotify" id="logo">
+                </div>
+                <div class="icon">
+                    <div class="home">
+                        <img src="./img/home.svg" alt=""><span>Home</span>
+                    </div>
+                    <div class="search">
+                        <img src="./img/search.svg" alt=""><span>Search</span>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <h3>PLAYLIST</h3>
+                    <div class="add">
+                        <div class="plus">+</div>
+                        <span>Crea Playlist</span>
+                    </div>
+                    <ul>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="install">
+                    <img src="./img/download.svg" alt=""><span>Installa app</span>
+                </div>
+                <div class="profile">
+                    <img src="./img/profile.svg" alt="">
+                    <span>
+                        <h3>Jhon Doe</h3>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+
+        <div class="container">
             <div class="upgrade">
                 <button class="btn">
                     EFFETTUA UPGRADE
@@ -122,10 +92,92 @@
                     </li>
                 </ul>
             </div>
+            <h2>Recently played</h2>
+            <div class="row">
+                <div class="card">
+                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal">
+                    <div class="title">
+                        <h3>Heavy Metal</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/stranger.jpeg" alt="Stranger Things">
+                    <div class="title">
+                        <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                        <h4>Kyle Dixon & Micheal Stein</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/aquietplace.jpeg" alt="A Quiet Place">
+                    <div class="title">
+                        <h3>A quiet place</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/split.jpeg" alt="Split">
+                    <div class="title">
+                        <h3>Split</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/cure.jpeg" alt="A Cura for Wellness">
+                    <div class="title">
+                        <h3>A cure for wellness</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/sinister.jpeg" alt="Sinister">
+                    <div class="title">
+                        <h3>Sinister</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+                </div>
+            </div>
+            <h2>Creato per Jhon Doe</h2>
+            <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
+            <div class="row">
+                <div class="card">
+                    <img src="./img/radar.jpeg" alt="Release Radar">
+                    <div class="title">
+                        <h3>Release radar</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/mixdaily.jpeg" alt="Daily mix">
+                    <div class="title">
+                        <h3>Daily Mix 1</h3>
+                    </div>
+                </div>
+            </div>
+            <h2>Artisti più popolari</h2>
+            <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
+            <div class="row">
+                <div class="card rounded">
+                    <img src="./img/youg.jpeg" alt="Young">
+                    <div class="title">
+                        <h3>Lana del Rey</h3>
+                    </div>
+                </div>
+                <div class="card rounded">
+                    <img src="./img/einaudi.jpeg" alt="Einaudi">
+                    <div class="title">
+                        <h3>Einaudi</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <!-- /Main -->
 
-    <footer></footer>
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+    <!-- /Footer -->
 
 </body>
 
