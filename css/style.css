@@ -57,6 +57,18 @@ ul {
     margin: 0;
 }
 
+.hoverbar {
+    height: .3125rem;
+    border-radius: .625rem;
+    background-color: #555555;
+}
+
+.bar {
+    height: .3125rem;
+    border-radius: .625rem;
+    background-color: #7d7f84;
+}
+
 /* #endregion COMMON*/
 
 /* #region MAIN*/
@@ -210,12 +222,12 @@ ul {
 
 footer {
     height: 5.625rem;
-    padding: 0 .625rem;
     color: #fff;
     background-color: #282828;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 10px;
 }
 
 footer h6,
@@ -225,18 +237,25 @@ footer h6,
 
 footer .left .song {
     display: flex;
+    width: 100%;
 }
 
 footer .left .song img {
-    width: 10%;
-    padding: .5rem;
+    width: 100%;
     display: block;
+}
+
+footer .left .song .footer-image {
+    min-width: 3.125rem;
+    max-width: 3.125rem;
+    margin: auto 0;
 }
 
 footer .left .footer-title {
     margin-left: .625rem;
-    margin-right: 1.5625rem;
     align-self: center;
+    display: flex;
+    gap: .625rem;
 }
 
 
@@ -250,13 +269,9 @@ footer .left .footer-icon i {
     padding: .1875rem;
 }
 
-footer .left,
-footer .right {
-    width: 25%;
-}
-
 footer .central {
-    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 footer .central .player {
@@ -265,20 +280,53 @@ footer .central .player {
     align-items: center;
     gap: 1.5625rem;
     font-size: 1.5rem;
+    margin-bottom: .9375rem
 }
 
 .fa-regular.fa-circle-play {
     font-size: 2.125rem;
 }
 
+footer .central .time {
+    display: flex;
+    align-items: center;
+    font-size: .625rem;
+    font-weight: bold;
+}
+
+footer .bar {
+    width: 20%;
+}
+
+footer .central .hoverbar {
+    margin: .625rem;
+    width: 100%;
+}
+
+
 footer .right {
     display: flex;
     justify-content: end;
+    align-items: center;
+}
+
+footer .right .time {
+    width: 6.25rem;
+}
+
+footer .right .hoverbar {
+    margin-left: .625rem;
+}
+
+
+footer .right .right-icon {
+    display: flex;
 }
 
 footer .right i {
-    padding: 10px;
+    padding-left: .625rem;
 }
+
 
 
 /* #endregion FOOTER*/
@@ -327,6 +375,20 @@ footer .right i {
 
     .container .row .card {
         width: calc(100% / 4 - 1.25rem);
+    }
+
+
+    footer .left,
+    footer .right {
+        width: 20%;
+    }
+
+    footer .central {
+        width: 60%;
+    }
+
+    footer .central .central-box {
+        width: 50%;
     }
 
 }
