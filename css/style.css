@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    height: 100%;
+    height: calc(100% - 5.625rem);
     display: flex;
 }
 
@@ -33,6 +33,7 @@ ul {
 
 .add {
     width: 15rem;
+    margin: 1.25rem 0;
 }
 
 .container h2 {
@@ -66,6 +67,7 @@ ul {
     background-color: black;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     line-height: 2.5rem;
     color: #555555;
@@ -102,9 +104,17 @@ ul {
     vertical-align: middle;
 }
 
+.playlist .list {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .bottom {
-    margin-top: auto;
     width: 100%;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    background-color: black;
 }
 
 .plus {
@@ -173,12 +183,12 @@ ul {
 .container .row {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 20px;
+    padding-left: .625rem;
 }
 
 .container .row .card {
     width: calc(100% / 2 - 1.25rem);
-    padding: .625rem;
+    margin: .625rem;
 }
 
 .container .row .card img {
@@ -198,9 +208,18 @@ ul {
 
 /* #region FOOTER*/
 
+footer {
+    height: 5.625rem;
+    background-color: #555555;
+}
+
 /* #endregion FOOTER*/
 
-@media screen and (min-width:576px) {
+
+
+/* #region RESPONSIVE*/
+
+@media screen and (min-width:577px) {
 
     .sidebar {
         width: 15rem;
@@ -239,7 +258,27 @@ ul {
     }
 
     .container .row .card {
-        width: calc(100% / 6 - 1.25rem);
+        width: calc(100% / 4 - 1.25rem);
     }
 
 }
+
+@media screen and (min-width:768px) {
+
+    .container .row .card {
+        width: calc(100% / 5 - 1.25rem);
+    }
+
+
+}
+
+@media screen and (min-width:992px) {
+
+    .container .row .card {
+        width: calc(100% / 6 - 1.25rem);
+    }
+
+
+}
+
+/* #endregion RESPONSIVE*/
