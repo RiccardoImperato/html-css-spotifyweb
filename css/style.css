@@ -14,13 +14,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+footer .right i {
+    font-size: .75rem;
+}
+
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
-
-body {
-    /* height: 100vh; */
-}
 
 main {
     height: calc(100% - 5.625rem);
@@ -73,7 +73,10 @@ ul {
 
 /* #region MAIN*/
 
+/* Sidebar */
+
 .sidebar {
+    width: 3.125rem;
     padding: .3125rem .625rem;
     color: #fff;
     background-color: black;
@@ -95,7 +98,7 @@ ul {
     display: none;
 }
 
-.logo img {
+.sidebar .logo img {
     display: block;
 }
 
@@ -116,12 +119,12 @@ ul {
     vertical-align: middle;
 }
 
-.playlist .list {
+.sidebar .playlist .list {
     height: 100vh;
     overflow: hidden;
 }
 
-.bottom {
+.sidebar .bottom {
     width: 100%;
     position: sticky;
     left: 0;
@@ -129,7 +132,7 @@ ul {
     background-color: black;
 }
 
-.plus {
+.sidebar .playlist .add .plus {
     display: inline-block;
     width: 3rem;
     font-size: 2.5rem;
@@ -144,13 +147,21 @@ ul {
     display: none;
 }
 
+.install img {
+    width: 1.25rem;
+}
+
+/* /Sidebar */
+
+/* Topbar */
+
 .container {
     background-color: #141922;
     flex-grow: 1;
     font-size: .75rem;
 }
 
-.upgrade {
+.container .upgrade {
     position: sticky;
     top: 0;
     left: 0;
@@ -160,19 +171,19 @@ ul {
     justify-content: end;
     align-items: center;
     height: 5.625rem;
-    background-color: #080b12;
-    opacity: 0.5;
+    background-color: rgba(8, 11, 18, 0.5);
     padding-right: .625rem;
 }
 
-.upgrade .btn {
+.container .upgrade .btn {
     color: #fff;
     border: .125rem solid #fff;
-    background-color: #080b12;
+    background-color: transparent;
     border-radius: 1.875rem;
     padding: .625rem 1.5rem;
     font-size: .75rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .container .top-menu {
@@ -183,6 +194,7 @@ ul {
     font-weight: bold;
     font-size: .75rem;
     margin-bottom: 3.125rem;
+    text-transform: uppercase;
 }
 
 .container .top-menu ul {
@@ -215,12 +227,14 @@ ul {
     border-radius: 50%;
 }
 
-/* #endregion MAIN*/
+/* Topbar */
 
+/* #endregion MAIN*/
 
 /* #region FOOTER*/
 
 footer {
+    max-width: 100vw;
     height: 5.625rem;
     color: #fff;
     background-color: #282828;
@@ -235,6 +249,12 @@ footer h6,
     color: #555555;
 }
 
+footer .left,
+footer .central,
+footer .right {
+    width: 30%;
+}
+
 footer .left .song {
     display: flex;
     width: 100%;
@@ -246,8 +266,7 @@ footer .left .song img {
 }
 
 footer .left .song .footer-image {
-    min-width: 3.125rem;
-    max-width: 3.125rem;
+    width: 3.125rem;
     margin: auto 0;
 }
 
@@ -255,7 +274,7 @@ footer .left .footer-title {
     margin-left: .625rem;
     align-self: center;
     display: flex;
-    gap: .625rem;
+    gap: .3125rem;
 }
 
 
@@ -279,7 +298,7 @@ footer .central .player {
     justify-content: center;
     align-items: center;
     gap: 1.5625rem;
-    font-size: 1.5rem;
+    font-size: .9375rem;
     margin-bottom: .9375rem
 }
 
@@ -327,10 +346,7 @@ footer .right i {
     padding-left: .625rem;
 }
 
-
-
 /* #endregion FOOTER*/
-
 
 
 /* #region RESPONSIVE*/
@@ -373,11 +389,6 @@ footer .right i {
         border-bottom: .0625rem solid grey;
     }
 
-    .container .row .card {
-        width: calc(100% / 4 - 1.25rem);
-    }
-
-
     footer .left,
     footer .right {
         width: 20%;
@@ -391,14 +402,17 @@ footer .right i {
         width: 50%;
     }
 
+    footer .right .time {
+        min-width: 6.25rem;
+    }
 }
+
 
 @media screen and (min-width:768px) {
 
     .container .row .card {
-        width: calc(100% / 5 - 1.25rem);
+        width: calc(100% / 4 - 1.25rem);
     }
-
 
 }
 
@@ -407,7 +421,6 @@ footer .right i {
     .container .row .card {
         width: calc(100% / 6 - 1.25rem);
     }
-
 
 }
 
