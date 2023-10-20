@@ -22,9 +22,12 @@ footer .right i {
 
 /* #region COMMON*/
 
+body {
+    display: flex;
+}
+
 main {
     height: calc(100% - 5.625rem);
-    display: flex;
 }
 
 ul {
@@ -71,9 +74,7 @@ ul {
 
 /* #endregion COMMON*/
 
-/* #region MAIN*/
-
-/* Sidebar */
+/* #region Sidebar */
 
 .sidebar {
     width: 3.125rem;
@@ -87,6 +88,7 @@ ul {
     line-height: 2.5rem;
     color: #555555;
     font-weight: bold;
+    z-index: 2;
 }
 
 .sidebar .top,
@@ -128,7 +130,7 @@ ul {
     width: 100%;
     position: sticky;
     left: 0;
-    bottom: 0;
+    bottom: 5.625rem;
     background-color: black;
 }
 
@@ -151,18 +153,21 @@ ul {
     width: 1.25rem;
 }
 
-/* /Sidebar */
+/* #endregion Sidebar */
 
-/* Topbar */
+/* #region MAIN*/
 
 .container {
     background-color: #141922;
     flex-grow: 1;
     font-size: .75rem;
+    padding-bottom: 5.625rem;
 }
 
-.container .upgrade {
-    position: sticky;
+/* Header */
+
+.upgrade {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -173,9 +178,10 @@ ul {
     height: 5.625rem;
     background-color: rgba(8, 11, 18, 0.5);
     padding-right: .625rem;
+    z-index: 1;
 }
 
-.container .upgrade .btn {
+.upgrade .btn {
     color: #fff;
     border: .125rem solid #fff;
     background-color: transparent;
@@ -186,8 +192,13 @@ ul {
     text-transform: uppercase;
 }
 
+/* /Header */
+
+
+/* Top-menu */
+
 .container .top-menu {
-    margin-top: 1.5rem;
+    padding-top: 7.5rem;
     display: flex;
     justify-content: center;
     color: #7d7f84;
@@ -204,10 +215,14 @@ ul {
     gap: 1.5rem;
 }
 
+/* /Top-menu */
+
+/* Sezione brani */
+
 .container .row {
     display: flex;
     flex-wrap: wrap;
-    padding-left: .625rem;
+    padding: 1.25rem .625rem;
 }
 
 .container .row .card {
@@ -215,26 +230,54 @@ ul {
     margin: .625rem;
 }
 
+.row .card .cover {
+    position: relative;
+}
+
+.cover .fa-circle-play {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 4.5rem;
+    display: none;
+}
+
+.row .card .cover:hover .fa-circle-play {
+    display: block;
+}
+
+.cover img:hover {
+    filter: grayscale(100%) brightness(38%) contrast(112%);
+}
+
 .container .row .card img {
     width: 100%;
+    display: block;
 }
 
 .container .row .card .title {
     text-align: center;
+    height: 20%;
 }
 
 .container .row .card.rounded img {
     border-radius: 50%;
 }
 
-/* Topbar */
+/* /Sezione brani */
 
 /* #endregion MAIN*/
 
 /* #region FOOTER*/
 
+/* Footer-left */
+
 footer {
-    max-width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
     height: 5.625rem;
     color: #fff;
     background-color: #282828;
@@ -242,6 +285,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
+    z-index: 2;
 }
 
 footer h6,
@@ -288,6 +332,10 @@ footer .left .footer-icon i {
     padding: .1875rem;
 }
 
+/* /Footer-left */
+
+/* Footer-central */
+
 footer .central {
     display: flex;
     justify-content: center;
@@ -302,7 +350,7 @@ footer .central .player {
     margin-bottom: .9375rem
 }
 
-.fa-regular.fa-circle-play {
+footer .central .fa-circle-play {
     font-size: 2.125rem;
 }
 
@@ -322,6 +370,9 @@ footer .central .hoverbar {
     width: 100%;
 }
 
+/* /Footer-central */
+
+/* Footer-right */
 
 footer .right {
     display: flex;
@@ -346,12 +397,15 @@ footer .right i {
     padding-left: .625rem;
 }
 
-/* #endregion FOOTER*/
+/* /Footer-right */
 
+/* #endregion FOOTER*/
 
 /* #region RESPONSIVE*/
 
 @media screen and (min-width:577px) {
+
+    /*Sidebar */
 
     .sidebar {
         width: 15rem;
@@ -389,6 +443,8 @@ footer .right i {
         border-bottom: .0625rem solid grey;
     }
 
+    /*Footer */
+
     footer .left,
     footer .right {
         width: 20%;
@@ -410,6 +466,8 @@ footer .right i {
 
 @media screen and (min-width:768px) {
 
+    /*Cover */
+
     .container .row .card {
         width: calc(100% / 4 - 1.25rem);
     }
@@ -417,6 +475,8 @@ footer .right i {
 }
 
 @media screen and (min-width:992px) {
+
+    /*Cover */
 
     .container .row .card {
         width: calc(100% / 6 - 1.25rem);
