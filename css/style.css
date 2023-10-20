@@ -34,6 +34,10 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .add {
     margin: 1.25rem 0;
 }
@@ -125,26 +129,26 @@ ul {
     overflow-y: scroll;
 }
 
-/* width */
+/* Scrollbar */
+
 .sidebar .playlist .list::-webkit-scrollbar {
     width: .3125rem;
 }
 
-/* Track */
 .sidebar .playlist .list::-webkit-scrollbar-track {
     background: #000;
 }
 
-/* Handle */
 .sidebar .playlist .list::-webkit-scrollbar-thumb {
     background: #7d7f84;
     border-radius: .3125rem;
 }
 
-/* Handle on hover */
 .sidebar .playlist .list::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* /Scrollbar */
 
 .sidebar .bottom {
     position: sticky;
@@ -281,6 +285,8 @@ ul {
     justify-content: center;
     gap: 1.5rem;
 }
+
+
 
 .container .top-menu li:hover {
     filter: brightness(3);
@@ -440,7 +446,6 @@ footer .central .player {
     align-items: center;
     gap: 1.5625rem;
     font-size: .9375rem;
-    margin-bottom: .9375rem
 }
 
 footer .central .fa-circle-play {
@@ -461,6 +466,28 @@ footer .central .time {
 
 footer .bar {
     width: 20%;
+    position: relative;
+    cursor: pointer;
+}
+
+footer .bar:hover {
+    background-color: #b6f54e;
+
+}
+
+footer .bar:hover .dot {
+    display: block;
+}
+
+footer .bar .dot {
+    position: absolute;
+    right: -0.3125rem;
+    top: -0.1875rem;
+    height: .75rem;
+    width: .75rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: none;
 }
 
 footer .central .hoverbar {
