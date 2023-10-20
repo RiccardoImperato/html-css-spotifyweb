@@ -40,12 +40,13 @@ ul {
 
 .container h2 {
     color: #fff;
-    margin-left: 1.875rem;
+    margin-left: 1.25rem;
 }
 
-.container h4 {
+.container h3 {
     color: #555555;
-    margin-left: 1.875rem;
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
 }
 
 .card h3 {
@@ -121,20 +122,42 @@ ul {
 
 .sidebar .playlist .list {
     height: 100vh;
-    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* width */
+.sidebar .playlist .list::-webkit-scrollbar {
+    width: .3125rem;
+}
+
+/* Track */
+.sidebar .playlist .list::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+.sidebar .playlist .list::-webkit-scrollbar-thumb {
+    background: #7d7f84;
+    border-radius: .3125rem;
+}
+
+/* Handle on hover */
+.sidebar .playlist .list::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .sidebar .bottom {
-    width: 100%;
     position: sticky;
-    left: 0;
     bottom: 5.625rem;
-    background-color: black;
+    left: 0;
+    background-color: #000000;
+    padding-bottom: .625rem;
 }
 
 .sidebar .bottom .install,
 .sidebar .bottom .profile {
     display: flex;
+    justify-content: center;
 }
 
 .sidebar .bottom .install-icon {
@@ -156,12 +179,13 @@ ul {
 
 .sidebar .bottom .profile h3 {
     color: #fff;
-    margin-left: .625rem;
 }
 
 .sidebar .bottom .profile-icon img {
     width: 1.875rem;
     height: 1.875rem;
+    position: relative;
+    bottom: .3125rem;
 }
 
 .sidebar .playlist .add .plus {
@@ -238,7 +262,6 @@ ul {
 
 /* /Header */
 
-
 /* Top-menu */
 
 .container .top-menu {
@@ -270,7 +293,7 @@ ul {
 .container .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 1.25rem .625rem;
+    padding: 1.5625rem .625rem;
 }
 
 .container .row .card {
@@ -285,6 +308,7 @@ ul {
 .card i {
     color: #fff;
     font-size: 4.5rem;
+    cursor: pointer;
 }
 
 .play {
@@ -354,6 +378,14 @@ footer h6,
     color: #555555;
 }
 
+.footer-icon i {
+    cursor: pointer;
+}
+
+.footer-icon i:hover {
+    filter: brightness(3);
+}
+
 footer .left,
 footer .central,
 footer .right {
@@ -415,6 +447,11 @@ footer .central .fa-circle-play {
     font-size: 2.125rem;
 }
 
+
+footer .central .fa-circle-play:hover {
+    scale: 1.1;
+}
+
 footer .central .time {
     display: flex;
     align-items: center;
@@ -466,6 +503,21 @@ footer .right i {
 
 @media screen and (min-width:577px) {
 
+    /*Typo */
+
+    .container h2 {
+        font-size: 1.6875rem;
+    }
+
+    .container h3 {
+        font-size: 1.25rem;
+    }
+
+    .container h4 {
+        font-size: 1.125rem;
+    }
+
+
     /*Sidebar */
 
     .sidebar {
@@ -500,8 +552,18 @@ footer .right i {
         overflow: hidden;
     }
 
+    .sidebar .bottom .install,
+    .sidebar .bottom .profile {
+        display: flex;
+        justify-content: start;
+    }
+
     .install {
         border-bottom: .0625rem solid grey;
+    }
+
+    .profile {
+        width: 15rem;
     }
 
     /*Footer */
