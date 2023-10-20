@@ -22,6 +22,10 @@ footer .right i {
 
 /* #region COMMON*/
 
+.rel {
+    position: relative;
+}
+
 body {
     display: flex;
 }
@@ -83,7 +87,7 @@ a {
 
 .sidebar {
     width: 3.125rem;
-    padding: .3125rem .625rem;
+    padding: .625rem;
     color: #fff;
     background-color: black;
     display: flex;
@@ -96,6 +100,20 @@ a {
     z-index: 2;
 }
 
+.sidebar .border-left {
+    height: 2.5rem;
+    width: 1.5625rem;
+    border-left: .125rem solid #b6f54e;
+    position: absolute;
+    left: -1.25rem;
+    top: 0;
+    display: none;
+}
+
+.sidebar .icon div:hover .border-left {
+    display: block;
+}
+
 .sidebar .top,
 .sidebar .bottom {
     width: 100%;
@@ -103,6 +121,7 @@ a {
 
 .sidebar span {
     display: none;
+    cursor: pointer;
 }
 
 .sidebar .logo img {
@@ -114,15 +133,29 @@ a {
     display: none;
 }
 
-#small-logo {
-    height: 1.5625rem;
-    width: 1.5625rem;
+.sidebar .icon {
+    margin-top: .625rem;
 }
 
 .sidebar .icon img,
 .sidebar .bottom img {
-    width: 1.5625rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sidebar .playlist .add .plus {
+    display: inline-block;
+    width: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
     vertical-align: middle;
+    color: #000;
+    background-color: #555555;
+    cursor: pointer;
+}
+
+.playlist {
+    display: none;
 }
 
 .sidebar .playlist .list {
@@ -195,22 +228,6 @@ a {
     width: 1.875rem;
     height: 1.875rem;
     position: relative;
-    bottom: .3125rem;
-}
-
-.sidebar .playlist .add .plus {
-    display: inline-block;
-    width: 3rem;
-    font-size: 2.5rem;
-    text-align: center;
-    vertical-align: middle;
-    color: #000;
-    background-color: #555555;
-    cursor: pointer;
-}
-
-.playlist {
-    display: none;
 }
 
 .sidebar span:hover {
@@ -291,10 +308,28 @@ a {
     gap: 1.5rem;
 }
 
+.container .top-menu li {
+    border-bottom: .125rem solid transparent;
+    position: relative;
+}
 
-
-.container .top-menu li:hover {
+.container .top-menu li:hover a {
     filter: brightness(3);
+}
+
+.container .top-menu li:hover .border-bottom {
+    display: block;
+}
+
+.container .top-menu .border-bottom {
+    height: .125rem;
+    width: 1.5625rem;
+    border-bottom: .125rem solid #b6f54e;
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    transform: translate(-50%);
+    display: none;
 }
 
 /* /Top-menu */
@@ -380,7 +415,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 .3125rem;
     z-index: 2;
 }
 
@@ -389,7 +424,7 @@ footer h6,
     color: #555555;
 }
 
-.footer-icon i {
+footer i {
     cursor: pointer;
 }
 
@@ -539,21 +574,6 @@ footer .right i {
 
 @media screen and (min-width:577px) {
 
-    /*Typo */
-
-    .container h2 {
-        font-size: 1.6875rem;
-    }
-
-    .container h3 {
-        font-size: 1.25rem;
-    }
-
-    .container h4 {
-        font-size: 1.125rem;
-    }
-
-
     /*Sidebar */
 
     .sidebar {
@@ -582,6 +602,11 @@ footer .right i {
         display: block;
     }
 
+    .sidebar .icon img {
+        width: 2.1875rem;
+        vertical-align: middle;
+    }
+
     .playlist {
         display: flex;
         flex-direction: column;
@@ -597,6 +622,11 @@ footer .right i {
     .install {
         border-bottom: .0625rem solid grey;
     }
+
+    .install img {
+        vertical-align: middle;
+    }
+
 
     .profile {
         width: 12.5rem;
@@ -634,6 +664,25 @@ footer .right i {
 }
 
 @media screen and (min-width:992px) {
+
+
+    /*Typo */
+
+    .container h2 {
+        font-size: 1.6875rem;
+    }
+
+    .container h3 {
+        font-size: 1.25rem;
+    }
+
+    .container h4 {
+        font-size: 1.125rem;
+    }
+
+    .top-menu a {
+        font-size: .9375rem;
+    }
 
     /*Cover */
 
