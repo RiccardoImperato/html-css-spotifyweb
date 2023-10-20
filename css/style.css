@@ -248,7 +248,7 @@ ul {
 }
 
 .cover img:hover {
-    filter: grayscale(100%) brightness(38%) contrast(112%);
+    filter: brightness(38%);
 }
 
 .container .row .card img {
