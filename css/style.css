@@ -65,7 +65,6 @@ a {
 
 .card h4 {
     color: #555555;
-    text-align: center;
     margin: 0;
 }
 
@@ -79,6 +78,8 @@ a {
     height: .3125rem;
     border-radius: .625rem;
     background-color: #7d7f84;
+    width: 30%;
+    cursor: pointer;
 }
 
 /* #endregion COMMON*/
@@ -334,7 +335,7 @@ a {
 
 /* /Top-menu */
 
-/* Sezione brani */
+/* Song section */
 
 .container .row {
     display: flex;
@@ -388,15 +389,12 @@ a {
     height: 20%;
 }
 
-.container .row .card.rounded img {
-    border-radius: 50%;
-}
-
+.card.rounded img,
 .card.rounded .play {
     border-radius: 50%;
 }
 
-/* /Sezione brani */
+/* /Song section */
 
 /* #endregion MAIN*/
 
@@ -496,7 +494,6 @@ footer .central .fa-circle-play {
     font-size: 2.125rem;
 }
 
-
 footer .central .fa-circle-play:hover {
     scale: 1.1;
 }
@@ -508,19 +505,8 @@ footer .central .time {
     font-weight: bold;
 }
 
-footer .bar {
-    width: 20%;
-    position: relative;
-    cursor: pointer;
-}
-
 footer .bar:hover {
     background-color: #b6f54e;
-
-}
-
-footer .bar:hover .dot {
-    display: block;
 }
 
 footer .bar .dot {
@@ -532,6 +518,10 @@ footer .bar .dot {
     background-color: #fff;
     border-radius: 50%;
     display: none;
+}
+
+footer .bar:hover .dot {
+    display: block;
 }
 
 footer .central .hoverbar {
@@ -557,7 +547,6 @@ footer .right .hoverbar {
     margin-left: .625rem;
 }
 
-
 footer .right .right-icon {
     display: flex;
 }
@@ -571,6 +560,8 @@ footer .right i {
 /* #endregion FOOTER*/
 
 /* #region RESPONSIVE*/
+
+/* Small */
 
 @media screen and (min-width:577px) {
 
@@ -627,7 +618,6 @@ footer .right i {
         vertical-align: middle;
     }
 
-
     .profile {
         width: 12.5rem;
     }
@@ -652,6 +642,7 @@ footer .right i {
     }
 }
 
+/* Medium */
 
 @media screen and (min-width:768px) {
 
@@ -663,8 +654,9 @@ footer .right i {
 
 }
 
-@media screen and (min-width:992px) {
+/* Large */
 
+@media screen and (min-width:992px) {
 
     /*Typo */
 
