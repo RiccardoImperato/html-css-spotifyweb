@@ -69,13 +69,13 @@ a {
 }
 
 .hoverbar {
-    height: .3125rem;
+    height: .1875rem;
     border-radius: .625rem;
     background-color: #555555;
 }
 
 .bar {
-    height: .3125rem;
+    height: .1875rem;
     border-radius: .625rem;
     background-color: #7d7f84;
     width: 30%;
@@ -413,7 +413,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 .3125rem;
     z-index: 2;
 }
 
@@ -436,8 +435,14 @@ footer .right {
     width: 30%;
 }
 
+footer .left,
+footer .right {
+    padding: 0 .625rem;
+}
+
 footer .left .song {
     display: flex;
+    align-items: center;
     width: 100%;
 }
 
@@ -447,18 +452,14 @@ footer .left .song img {
 }
 
 footer .left .song .footer-image {
-    width: 3.125rem;
-    margin: auto 0;
+    width: 60%;
 }
 
 footer .left .footer-title {
-    margin-left: .625rem;
-    align-self: center;
-    display: flex;
-    gap: .3125rem;
+    margin: 0 .625rem;
 }
 
-footer .left .name h6:hover {
+footer .left .footer-title h6:hover {
     filter: brightness(3);
     text-decoration: underline;
 }
@@ -487,7 +488,6 @@ footer .central .player {
     justify-content: center;
     align-items: center;
     gap: 1.5625rem;
-    font-size: .9375rem;
 }
 
 footer .central .fa-circle-play {
@@ -495,13 +495,13 @@ footer .central .fa-circle-play {
 }
 
 footer .central .fa-circle-play:hover {
-    scale: 1.1;
+    scale: 1.2;
 }
 
 footer .central .time {
     display: flex;
     align-items: center;
-    font-size: .625rem;
+    font-size: .5rem;
     font-weight: bold;
 }
 
@@ -513,8 +513,8 @@ footer .bar .dot {
     position: absolute;
     right: -0.3125rem;
     top: -0.1875rem;
-    height: .75rem;
-    width: .75rem;
+    height: .625rem;
+    width: .625rem;
     background-color: #fff;
     border-radius: 50%;
     display: none;
@@ -626,19 +626,19 @@ footer .right i {
 
     footer .left,
     footer .right {
-        width: 20%;
+        width: 15rem;
+    }
+
+    footer .left .song .footer-image {
+        width: 30%;
     }
 
     footer .central {
-        width: 60%;
+        width: calc(100% - 30rem);
     }
 
     footer .central .central-box {
-        width: 50%;
-    }
-
-    footer .right .time {
-        min-width: 6.25rem;
+        width: 30rem;
     }
 }
 
@@ -650,6 +650,19 @@ footer .right i {
 
     .container .row .card {
         width: calc(100% / 4 - 1.25rem);
+    }
+
+    footer .left .footer-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /*Footer */
+
+    footer .left .song {
+        align-items: center;
+        justify-content: space-between;
     }
 
 }
